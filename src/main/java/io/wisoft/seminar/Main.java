@@ -5,10 +5,10 @@ public class Main {
 
         // SELECT AREA
         StudentSelectService selectStudent = new StudentSelectService();
-        System.out.println("학번 20110101 학생을 검색합니다..");
+        System.out.println("이름이 홍길동인 학생을 검색합니다.");
 
-        String studentNo = "20110101";
-        selectStudent.getStudentByNo(studentNo);
+        String studentName = "홍길동";
+        selectStudent.getStudentByName(studentName);
         System.out.println("");
     }
 }
