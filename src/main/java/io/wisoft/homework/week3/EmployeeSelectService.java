@@ -222,4 +222,41 @@ public class EmployeeSelectService {
         }
     }
 
+    public void getEmployeeByRname() {
+
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+
+        try {
+            conn = PostgresqlAccess.setConnection();
+            conn.setAutoCommit(false);
+
+            String query = "SELECT E.EMP_NAME, R.EMP_RNAME FROM EMPLOYEE E,EMP_ROLE R WHERE E.EMP_RCODE=R.EMP_RCODE";
+            pstmt = conn.prepareStatement(query);
+            rs = pstmt.executeQuery();
+
+            while (rs.next()) {
+                System.out.print("[이름]: " + rs.getString(1));
+                System.out.println(" | [직급]: " + rs.getString(2));
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+
+            if (rs != null) {
+                try { rs.close(); } catch (Exception e) { e.printStackTrace();}
+            }
+
+            if (pstmt != null) {
+                try { pstmt.close(); } catch (Exception e) { e.printStackTrace();}
+            }
+
+            if (conn != null) {
+                try { conn.close(); } catch (Exception e) { e.printStackTrace();}
+            }
+        }
+    }
+
 }

@@ -27,5 +27,9 @@ public class Main {
         String rcode = "R001";
         employeeSelectService.getEmployeeByRcode(rcode);
         System.out.println();
+
+        System.out.println("이름과 직급을 검색");
+        employeeSelectService.getEmployeeByRname();
+        System.out.println();
     }
 }
