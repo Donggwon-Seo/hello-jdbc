@@ -13,6 +13,8 @@ gradlew.bat
 settings.gradle
 .idea
 build.gradle
+src/main/java/io/wisoft/seminar/PostgresqlAccess.java
+src/main/java/io/wisoft/seminar/BadJdbcExample.java
 
 ### IntelliJ IDEA ###
 .idea/modules.xml

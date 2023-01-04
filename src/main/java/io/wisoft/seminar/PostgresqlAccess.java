@@ -16,9 +16,9 @@ public class PostgresqlAccess {
     }
 
     public static Connection setConnection() {
-        String url = "";
-        String username = "";
-        String password = "";
+        String url = "link";
+        String username = "postgres";
+        String password = "password";
 
         try {
             conn = DriverManager.getConnection(url, username, password);

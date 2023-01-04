@@ -8,6 +8,5 @@ public class Main {
         employeeSelectService.getEmployeeAll();
         System.out.println();
 
-        
     }
 }

@@ -1,5 +1,7 @@
 package io.wisoft.seminar;
 
+import java.sql.Date;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -10,5 +12,10 @@ public class Main {
         String studentName = "홍길동";
         selectStudent.getStudentByName(studentName);
         System.out.println("");
+
+        System.out.println("생일이 1991-02-28인 학생을 검색합니다.");
+        Date studentBirthday = Date.valueOf("1991-02-28");
+        selectStudent.getStudentByBirthday(studentBirthday);
+        System.out.println();
     }
 }

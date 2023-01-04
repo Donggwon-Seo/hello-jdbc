@@ -6,7 +6,7 @@ public class BadJdbcExample {
     public static void main(String[] args) {
         try {
             Connection connection = DriverManager.getConnection(
-                    ""
+                    "link","postgres", "password"
             );
 
             Statement statement;
