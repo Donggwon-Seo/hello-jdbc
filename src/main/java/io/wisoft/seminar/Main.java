@@ -33,8 +33,13 @@ public class Main {
 //        DELETE AREA
 
 //        deleteBatchTest(students, studentDeleteService);
+//        deleteTest(studentDeleteService);
 
+    }
 
+    private static void deleteTest(StudentDeleteService studentDeleteService) {
+        studentDeleteService.deleteStudentNo("20110401");
+        System.out.println("");
     }
 
     private static void deleteBatchTest(Student[] students, StudentDeleteService studentDeleteService) {
